@@ -27,7 +27,7 @@
 <body>
 
   <div class="container">
-    <h1 class="mb-4">🎯 Hangman</h1>
+    <h1 class="mb-4">The Hangman</h1>
 
     <div id="wordDisplay" class="mb-4">_ _ _ _</div>
 
@@ -43,7 +43,7 @@
 
   <script>
     const wordData = JSON.stringify({
-      words: ["javascript", "bootstrap", "hangman", "coding", "developer"]
+      words: ["Apple", "Cat", "Crib", "Computer", "Sport"]
     });
 
     const parsedData = JSON.parse(wordData);
@@ -115,10 +115,10 @@
 
     function checkGameStatus(display) {
       if (!display.includes("_")) {
-        document.getElementById("message").textContent = "🎉 You Win!";
+        document.getElementById("message").textContent = "You Win!";
         disableAllButtons();
       } else if (maxTries <= 0) {
-        document.getElementById("message").textContent = `💀 You Lose! Word was "${selectedWord}"`;
+        document.getElementById("message").textContent = `You Lose! Word was "${selectedWord}"`;
         disableAllButtons();
       }
     }
