@@ -68,7 +68,12 @@
     function updateDisplay() {
       const display = selectedWord
         .split("")
-        .map(letter => guessedLetters.includes(letter) ? letter : "_")
+        .map(letter => {
+          if (guessedLetters.includes(letter)) {
+            return letter;
+              } else {
+                return "_";
+                  }})        
         .join(" ");
 
       document.getElementById("wordDisplay").textContent = display;
