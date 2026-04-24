@@ -42,12 +42,10 @@
   </div>
 
   <script>
-    // JSON word list (data transfer format)
     const wordData = JSON.stringify({
       words: ["javascript", "bootstrap", "hangman", "coding", "developer"]
     });
 
-    // Parse JSON
     const parsedData = JSON.parse(wordData);
     const words = parsedData.words;
 
@@ -124,7 +122,6 @@
       document.querySelectorAll(".letter-btn").forEach(btn => btn.disabled = true);
     }
 
-    // Start game on load
     startGame();
   </script>
 
